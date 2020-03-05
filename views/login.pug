@@ -1,0 +1,29 @@
+doctype html
+html
+  head
+    title Login
+    link(rel='stylesheet', type='text/css', href='css/login.css')
+    link(href='https://fonts.googleapis.com/css?family=Poppins:600&display=swap', rel='stylesheet')
+    script(src='https://kit.fontawesome.com/a81368914c.js')
+  body
+    img.wave(src='imgs/wave.png')
+    .container
+      .img
+      .login-content
+        form(action='/auth', method='POST')
+          img(src='imgs/logo.svg')
+          .input-div.one
+            .i
+              i.fas.fa-user
+            .div
+              h5 Username
+              input.input(type='text', name='username')
+          .input-div.pass
+            .i
+              i.fas.fa-lock
+            .div
+              h5 Password
+              input.input(type='password', name='password')
+          a(href='#') Forgot Password?
+          input.btn(type='submit', value='Login')
+    script(type='text/javascript', src='js/login.js')
