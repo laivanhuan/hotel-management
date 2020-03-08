@@ -39,6 +39,10 @@ const PORT = process.env.PORT;
 app.use('/', routes.LOGIN);
 app.use('/dashboard', middlewares.AUTH, routes.DASHBOARD);
 
+app.use(function(_, res){
+    res.status(404).render('404.pug');
+});
+
 app.listen(PORT, (err) => {
     if (err) throw err;
     console.info(`> Ready on ${PORT}`);

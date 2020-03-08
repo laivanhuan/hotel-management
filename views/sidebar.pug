@@ -1,0 +1,82 @@
+doctype html
+html(lang='en')
+    head
+        meta(charset='utf-8')
+        meta(http-equiv='X-UA-Compatible', content='IE=edge')
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+        title Admin
+        link(href='bootstrap/dist/css/bootstrap.min.css', rel='stylesheet')
+        link(href='css/sidebar-nav.min.css', rel='stylesheet')
+        link(href='css/animate.css', rel='stylesheet')
+        link(href='css/style.css', rel='stylesheet')
+        link#theme(href='css/colors/default.css', rel='stylesheet')
+    body.fix-header
+        #wrapper
+            nav.navbar.navbar-default.navbar-static-top.m-b-0
+                .navbar-header
+                    .top-left-part
+                        a.logo(href='/dashboard')
+                            b
+                                img.dark-logo(src='imgs/admin-logo.png', alt='home')
+                                img.light-logo(src='imgs/admin-logo-dark.png', alt='home')
+                            span.hidden-xs
+                                img.dark-logo(src='imgs/admin-text.png', alt='home')
+                                img.light-logo(src='imgs/admin-text-dark.png', alt='home')
+                    ul.nav.navbar-top-links.navbar-right.pull-right
+                        li
+                            a.nav-toggler.open-close.waves-effect.waves-light.hidden-md.hidden-lg(href='javascript:void(0)')
+                                i.fa.fa-bars
+                        li
+                            form.app-search.hidden-sm.hidden-xs.m-r-10(role='search')
+                                input.form-control(type='text', placeholder='Search...')
+                                a(href='')
+                                    i.fa.fa-search
+                        li
+                            a.profile-pic(href='#')
+                                img.img-circle(src='imgs/varun.jpg', alt='user-img', width='36')
+                                b.hidden-xs Steave
+            .navbar-default.sidebar(role='navigation')
+                .sidebar-nav.slimscrollsidebar
+                    .sidebar-head
+                        h3
+                            span.fa-fw.open-close
+                                i.ti-close.ti-menu
+                            span.hide-menu Navigation
+                    ul#side-menu.nav
+                        li(style='padding: 70px 0 0;')
+                            a.waves-effect(href='dashboard.html')
+                                i.fa.fa-clock-o.fa-fw(aria-hidden='true')
+                                | Dashboard
+                        li
+                            a.waves-effect(href='profile.html')
+                                i.fa.fa-user.fa-fw(aria-hidden='true')
+                                | Profile
+                        li
+                            a.waves-effect(href='basic-table.html')
+                                i.fa.fa-table.fa-fw(aria-hidden='true')
+                                | Basic Table
+                        li
+                            a.waves-effect(href='fontawesome.html')
+                                i.fa.fa-font.fa-fw(aria-hidden='true')
+                                | Icons
+                        li
+                            a.waves-effect(href='map-google.html')
+                                i.fa.fa-globe.fa-fw(aria-hidden='true')
+                                | Google Map
+                        li
+                            a.waves-effect(href='blank.html')
+                                i.fa.fa-columns.fa-fw(aria-hidden='true')
+                                | Blank Page
+                        li
+                            a.waves-effect(href='404.html')
+                                i.fa.fa-info-circle.fa-fw(aria-hidden='true')
+                                | Error 404
+            #page-wrapper
+                block contents
+                footer.footer.text-center 
+        script(src='js/jquery.min.js')
+        script(src='bootstrap/dist/js/bootstrap.min.js')
+        script(src='js/sidebar-nav.min.js')
+        script(src='js/jquery.slimscroll.js')
+        script(src='js/waves.js')
+        script(src='js/custom.min.js')
