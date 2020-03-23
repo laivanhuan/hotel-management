@@ -38,6 +38,9 @@ const PORT = process.env.PORT;
 
 app.use('/', routes.LOGIN);
 app.use('/dashboard', middlewares.AUTH, routes.DASHBOARD);
+app.use('/customer', middlewares.AUTH, routes.CUSTOMER);
+app.use('/room', middlewares.AUTH, routes.ROOM);
+app.use('/control', middlewares.AUTH, routes.CONTROL);
 
 app.use(function(_, res){
     res.status(404).render('404.pug');
