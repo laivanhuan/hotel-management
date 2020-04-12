@@ -43,7 +43,7 @@ app.use('/room', middlewares.AUTH, routes.ROOM);
 app.use('/control', middlewares.AUTH, routes.CONTROL);
 
 app.use(function(_, res){
-    res.status(404).render('404.pug');
+    res.status(404).render('404');
 });
 
 app.listen(PORT, (err) => {
