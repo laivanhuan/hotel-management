@@ -7,7 +7,7 @@ $(document).ready(function () {
 		position: 'top-right',
 		loaderBg: '#fff',
 		icon: 'warning',
-		hideAfter: 3500,
+		hideAfter: 6000,
 		stack: 6
 	})
 });
