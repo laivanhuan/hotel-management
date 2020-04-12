@@ -1,0 +1,75 @@
+extends sidebar.pug
+block contents
+    .container-fluid
+        .row.bg-title
+            .col-lg-3.col-md-4.col-sm-4.col-xs-12
+            h4.page-title Quản lí phòng
+        .row
+            .col-md-12.col-lg-12.col-sm-12
+                .white-box
+                    .col-md-3.col-sm-4.col-xs-6.pull-right
+                    h3.box-title Danh sách phòng
+                    .table-responsive
+                        table.table
+                            thead
+                                tr
+                                    th #
+                                    th Số phòng
+                                    th Loại phòng
+                                    th Trạng thái
+                                    th Tác vụ
+                            tbody
+                                tr
+                                    td 1
+                                    td.txt-oflo
+                                        b 1001
+                                    td VIP
+                                    td
+                                        span.text-success Empty
+                                    td.txt-oflo 
+                                        a Checkin
+                                tr
+                                    td 2
+                                    td.txt-oflo
+                                        b 1002
+                                    td VIP
+                                    td
+                                        span.text-danger Busy
+                                    td.txt-oflo
+                                        a Checkout
+                                tr
+                                    td 3
+                                    td.txt-oflo
+                                        b 2001
+                                    td NORMAL
+                                    td
+                                        span.text-warning Pending
+                                    td.txt-oflo 
+                                        a Checkin
+                                tr
+                                    td 4
+                                    td.txt-oflo
+                                        b 1006
+                                    td VIP
+                                    td
+                                        span.text-success Empty
+                                    td.txt-oflo 
+                                        a Checkin
+                                tr
+                                    td 5
+                                    td.txt-oflo
+                                        b 3002
+                                    td VIP
+                                    td
+                                        span.text-danger Busy
+                                    td.txt-oflo
+                                        a Checkout
+                                tr
+                                    td 6
+                                    td.txt-oflo
+                                        b 2005
+                                    td NORMAL
+                                    td
+                                        span.text-warning Pending
+                                    td.txt-oflo 
+                                        a Checkin

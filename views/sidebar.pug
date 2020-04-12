@@ -1,0 +1,72 @@
+doctype html
+html(lang='en')
+    head
+        meta(charset='utf-8')
+        meta(http-equiv='X-UA-Compatible', content='IE=edge')
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+        title Admin
+        link(href='bootstrap/dist/css/bootstrap.min.css', rel='stylesheet')
+        link(href='css/sidebar-nav.min.css', rel='stylesheet')
+        link(href='css/animate.css', rel='stylesheet')
+        link(href='css/style.css', rel='stylesheet')
+        link#theme(href='css/colors/default.css', rel='stylesheet')
+    body.fix-header
+        #wrapper
+            nav.navbar.navbar-default.navbar-static-top.m-b-0
+                .navbar-header
+                    .top-left-part
+                    ul.nav.navbar-top-links.navbar-right.pull-right
+                        li
+                            a.nav-toggler.open-close.waves-effect.waves-light.hidden-md.hidden-lg(href='javascript:void(0)')
+                                i.fa.fa-bars
+                        li
+                            form.app-search.hidden-sm.hidden-xs.m-r-10(role='search')
+                                input.form-control(type='text', placeholder='Search...')
+                                a(href='')
+                                    i.fa.fa-search
+                        li
+                            a.profile-pic(href='#')
+                                img.img-circle(src='imgs/varun.jpg', alt='user-img', width='36')
+                                b.hidden-xs Admin
+            .navbar-default.sidebar(role='navigation')
+                .sidebar-nav.slimscrollsidebar
+                    .sidebar-head
+                        h3
+                            span.fa-fw.open-close
+                                i.ti-close.ti-menu
+                            span.hide-menu Navigation
+                    ul#side-menu.nav
+                        li(style='padding: 70px 0 0;')
+                            a.waves-effect(href='/dashboard')
+                                i.fa.fa-clock-o.fa-fw(aria-hidden='true')
+                                | Tổng quan
+                        li
+                            a.waves-effect(href='/customer')
+                                i.fa.fa-user.fa-fw(aria-hidden='true')
+                                | Quản lí khách hàng
+                        li
+                            a.waves-effect(href='/room')
+                                i.fa.fa-table.fa-fw(aria-hidden='true')
+                                | Quản lí phòng
+                        li
+                            a.waves-effect(href='/control')
+                                i.fa.fa-cog.fa-fw(aria-hidden='true')
+                                | Tác vụ
+                        li
+                            a.waves-effect(href='blank.html')
+                                i.fa.fa-columns.fa-fw(aria-hidden='true')
+                                | Truy vấn
+                        li
+                            a.waves-effect(href='404.html')
+                                i.fa.fa-info-circle.fa-fw(aria-hidden='true')
+                                | Thông tin
+            #page-wrapper
+                block contents
+                footer.footer.text-center 2020 &copy; by Lai Huan
+        script(src='js/jquery.min.js')
+        script(src='bootstrap/dist/js/bootstrap.min.js')
+        script(src='js/sidebar-nav.min.js')
+        script(src='js/jquery.slimscroll.js')
+        script(src='js/waves.js')
+        script(src='js/custom.min.js')
+        block scripts
