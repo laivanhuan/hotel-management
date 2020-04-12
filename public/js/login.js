@@ -1,3 +1,18 @@
+$(document).ready(function () {
+	"use strict";
+	// toat popup js
+	$.toast({
+		heading: 'Welcome!',
+		text: 'Use username is "admin" and password is "123456789" to login.',
+		position: 'top-right',
+		loaderBg: '#fff',
+		icon: 'warning',
+		hideAfter: 3500,
+		stack: 6
+	})
+});
+
+
 const inputs = document.querySelectorAll(".input");
 
 

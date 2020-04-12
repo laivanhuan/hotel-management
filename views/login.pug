@@ -5,6 +5,7 @@ html
     link(rel='stylesheet', type='text/css', href='css/login.css')
     link(href='https://fonts.googleapis.com/css?family=Poppins:600&display=swap', rel='stylesheet')
     script(src='https://kit.fontawesome.com/a81368914c.js')
+    link(rel='stylesheet', type='text/css', href="js/toast-master/css/jquery.toast.css")
   body
     img.wave(src='imgs/wave.png')
     .container
@@ -26,4 +27,12 @@ html
               input.input(type='password', name='password')
           a(href='#') Forgot Password?
           input.btn(type='submit', value='Login')
-    script(type='text/javascript', src='js/login.js')
+      .jq-toast-wrap.top-right
+        .jq-toast-single.jq-has-icon.jq-icon-warning(style='text-align: left; display: none;')
+          span.jq-toast-loader.jq-toast-loaded(style='-webkit-transition: width 3.1s ease-in;                       -o-transition: width 3.1s ease-in;                       transition: width 3.1s ease-in;                       background-color: #fff;')
+          span.close-jq-toast-single ×
+          h2.jq-toast-heading Welcome!
+          | Use username is "admin" and password is "123456789" to login.
+    script(src='js/jquery.min.js')
+    script(src='js/login.js')
+    script(src='js/toast-master/js/jquery.toast.js')
