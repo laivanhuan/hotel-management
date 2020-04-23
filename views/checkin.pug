@@ -1,0 +1,51 @@
+extends sidebar.pug
+block contents
+    .container-fluid
+        .row.bg-title
+            .col-lg-3.col-md-4.col-sm-4.col-xs-12
+            h4.page-title Đăng kí phòng
+        .row
+            .col-md-2
+            .col-md-8.col-xs-12
+                .white-box
+                    form.form-horizontal.form-material
+                        .form-group
+                            label.col-md-12 Họ và tên
+                            .col-md-12
+                                input.form-control.form-control-line(type='text' placeholder='Nhập họ và tên')
+                        .form-group
+                            label.col-md-12 Phone No
+                            .col-md-12
+                                input.form-control.form-control-line(type='text' placeholder='123 456 7890')
+                        .form-group
+                            label.col-md-12 Chứng minh thư
+                            .col-md-12
+                                input.form-control.form-control-line(type='text' placeholder='122 332 987')
+                        .form-group
+                            label.col-md-12 Message
+                            .col-md-12
+                                textarea.form-control.form-control-line(rows='5')
+                        .form-group
+                            label.col-sm-12 Giới tính
+                            .col-sm-12
+                                select.form-control.form-control-line
+                                    option Nam
+                                    option Nữ
+                        .form-group
+                            label.col-sm-12 Phòng đặt
+                            .col-sm-12
+                                select.form-control.form-control-line
+                                    option 1001
+                                    option 1002
+                        .form-group
+                            label.col-sm-12 Số người
+                            .col-sm-12
+                                select.form-control.form-control-line
+                                    option 1
+                                    option 2
+                                    option 3
+                                    option 4
+                        .form-group
+                            .col-sm-12
+                                button.btn.btn-success Đặt phòng
+        .col-md-2

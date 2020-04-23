@@ -1,0 +1,56 @@
+extends sidebar.pug
+block contents
+    .container-fluid
+        .row.bg-title
+            .col-lg-3.col-md-4.col-sm-4.col-xs-12
+            h4.page-title Trả phòng
+        .row
+            .col-md-4.col-xs-12
+                .white-box
+                    .user-bg
+                        img(width='100%' alt='user' src='/imgs/img1.jpg')
+                        .overlay-box
+                            .user-content
+                                a(href='#')
+                                    img.thumb-lg.img-circle(src='/imgs/genu.jpg' alt='img')
+                                h4.text-white Lại Văn Huân
+                                h5.text-white 0987 567 688
+                    .user-btm-box
+                        .col-md-4.col-sm-4.text-center
+                            p.text-purple
+                            i.ti-facebook
+                            h1 Total:
+                        .col-md-4.col-sm-4.text-center
+                            p.text-blue
+                            i.ti-twitter
+                            h1 125,000
+            .col-md-8.col-xs-12
+                .white-box
+                    form.form-horizontal.form-material
+                        .form-group
+                            label.col-md-12 Họ và tên
+                            .col-md-12
+                                input.form-control.form-control-line(type='text' disabled placeholder='Lại Văn Huân')
+                        .form-group
+                            label.col-md-12 Phone No
+                            .col-md-12
+                                input.form-control.form-control-line(type='text' disabled placeholder='123 456 7890')
+                        .form-group
+                            label.col-md-12 Chứng minh thư
+                            .col-md-12
+                                input.form-control.form-control-line(type='text' disabled placeholder='122 332 987')
+                        .form-group
+                            label.col-sm-12 Giới tính
+                            .col-sm-12
+                                input.form-control.form-control-line(type='text' disabled placeholder='Nam')
+                        .form-group
+                            label.col-sm-12 Phòng đặt
+                            .col-sm-12
+                                input.form-control.form-control-line(type='text' disabled placeholder='1222')
+                        .form-group
+                            label.col-sm-12 Số người
+                            .col-sm-12
+                                input.form-control.form-control-line(type='text' disabled placeholder='1')
+                        .form-group
+                            .col-sm-12
+                                button.btn.btn-success Trả phòng
