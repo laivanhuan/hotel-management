@@ -17,8 +17,8 @@ các người dùng hiện đang đặt phòng, ...
 
 ## Các chức năng dự định phát triển tiếp
 
-**1. Thống kê doanh thu**
-**2. Tra cứu lịch sử**
+**1. Thống kê doanh thu**.  
+**2. Tra cứu lịch sử**.
 
 ## Cơ sở dữ liệu
 ![csdl](csdl.png)
@@ -44,4 +44,4 @@ các người dùng hiện đang đặt phòng, ...
 4. Khởi tạo dữ liệu ban đầu
 > node initdb.js
 
-*Lúc này server đã chạy tại cổng 3000, truy cập **htpp://localhost:3000** để xem kết quả.
+* Lúc này server đã chạy tại cổng 3000, truy cập **htpp://localhost:3000** để xem kết quả.
