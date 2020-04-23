@@ -8,22 +8,26 @@ block contents
             .col-md-2
             .col-md-8.col-xs-12
                 .white-box
-                    form.form-horizontal.form-material
+                    form(method ='POST').form-horizontal.form-material
                         .form-group
                             label.col-md-12 Số phòng
                             .col-md-12
-                                input.form-control.form-control-line(type='text' placeholder='1280')
-                        .form-group
-                            label.col-md-12 Giá phòng
-                            .col-md-12
-                                input.form-control.form-control-line(type='text' placeholder='123000')
+                                input.form-control.form-control-line(type='text' placeholder='1280' name='room_name' required)
                         .form-group
                             label.col-sm-12 Loại phòng
                             .col-sm-12
-                                select.form-control.form-control-line
-                                    option VIP
-                                    option NORMAL
+                                select(name='roomtype_id').form-control.form-control-line
+                                    option(value=1) VIP
+                                    option(value=2) NORMAL
+                        .form-group
+                            label.col-sm-12 Số người tối đa
+                            .col-sm-12
+                                select(name='max_person').form-control.form-control-line
+                                    option(value=1) 1
+                                    option(value=2) 2
+                                    option(value=3) 3
+                                    option(value=4) 4
                         .form-group
                             .col-sm-12
-                                button.btn.btn-success Thêm phòng
+                                button(type='submit').btn.btn-success Thêm phòng
             .col-md-2

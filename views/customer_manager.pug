@@ -20,87 +20,16 @@ block contents
                                     th.text-center Giờ vào
                                     th.text-center Tác vụ
                             tbody
-                                tr.text-center
-                                    td 1
-                                    td.txt-oflo Nguyễn Văn Bê
-                                    td 1001
-                                    td
-                                        span.text-info 3
-                                    td.txt-oflo 4/01/2020, 7:36:49 PM
-                                    td
-                                        a(href="")
-                                            div
-                                                i.fa.fa-edit &nbsp;&nbsp;
-                                                span.text-danger Edit
-                                tr.text-center
-                                    td 2
-                                    td.txt-oflo Trần Văn Kiên
-                                    td 1002
-                                    td
-                                        span.text-info 3
-                                    td.txt-oflo 4/01/2020, 7:36:49 PM
-                                    td
-                                        a(href="")
-                                            div
-                                                i.fa.fa-edit &nbsp;&nbsp;
-                                                span.text-danger Edit
-                                tr.text-center
-                                    td 3
-                                    td.txt-oflo Đào Thế Việt
-                                    td 2001
-                                    td
-                                        span.text-info 3
-                                    td.txt-oflo 4/01/2020, 7:36:49 PM
-                                    td
-                                        a(href="")
-                                            div
-                                                i.fa.fa-edit &nbsp;&nbsp;
-                                                span.text-danger Edit
-                                tr.text-center
-                                    td 4
-                                    td.txt-oflo Đinh Tiên Hoàng
-                                    td 2011
-                                    td
-                                        span.text-info 3
-                                    td.txt-oflo 4/01/2020, 7:36:49 PM
-                                    td
-                                        a(href="")
-                                            div
-                                                i.fa.fa-edit &nbsp;&nbsp;
-                                                span.text-danger Edit
-                                tr.text-center
-                                    td 5
-                                    td.txt-oflo Đỗ Ngọc Thức
-                                    td 4001
-                                    td
-                                        span.text-info 3
-                                    td.txt-oflo 4/01/2020, 7:36:49 PM
-                                    td
-                                        a(href="")
-                                            div
-                                                i.fa.fa-edit &nbsp;&nbsp;
-                                                span.text-danger Edit
-                                tr.text-center
-                                    td 6
-                                    td.txt-oflo Phạm Hoàng Giang
-                                    td 4003
-                                    td
-                                        span.text-info 3
-                                    td.txt-oflo 4/01/2020, 7:36:49 PM
-                                    td
-                                        a(href="")
-                                            div
-                                                i.fa.fa-edit &nbsp;&nbsp;
-                                                span.text-danger Edit
-                                tr.text-center
-                                    td 7
-                                    td.txt-oflo Đỗ Văn thức
-                                    td 1006
-                                    td
-                                        span.text-info 3
-                                    td.txt-oflo 4/01/2020, 7:36:49 PM
-                                    td
-                                        a(href="")
-                                            div
-                                                i.fa.fa-edit &nbsp;&nbsp;
-                                                span.text-danger Edit
+                                each val, index in listCustomer
+                                    tr.text-center
+                                        td=index
+                                        td.txt-oflo=val.fullname
+                                        td= val.customer_id
+                                        td= val.numberphone
+                                        td.txt-oflo= new Date(val.createdAt).toLocaleString()
+                                        td
+                                            a(href=`/customer/${val.id}`)
+                                                div
+                                                    i.fa.fa-edit &nbsp;&nbsp;
+                                                    span.text-danger Edit
+                                

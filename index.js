@@ -5,14 +5,22 @@ const passport = require('passport');
 const session = require('express-session');
 const path = require('path');
 const flash = require('connect-flash');
+const models = require('./models');
 
 const routes = require('./routes');
 const middlewares = require('./middlewares');
 
 require('dotenv').config();
 require('./configs').PASSPORT(passport);
+const dbConfig = require('./configs/db');
 
 const app = express();
+models.sequelize.sync().then(function() {
+    // return dbConfig.initDB();
+    console.log('Connected DB');
+}).catch(function(err) {
+    console.log(err, 'Something went wrong with the Database Update!');
+});
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');

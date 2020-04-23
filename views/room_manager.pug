@@ -19,57 +19,34 @@ block contents
                                     th Trạng thái
                                     th Tác vụ
                             tbody
-                                tr
-                                    td 1
-                                    td.txt-oflo
-                                        b 1001
-                                    td VIP
-                                    td
-                                        span.text-success Empty
-                                    td.txt-oflo 
-                                        a Checkin
-                                tr
-                                    td 2
-                                    td.txt-oflo
-                                        b 1002
-                                    td VIP
-                                    td
-                                        span.text-danger Busy
-                                    td.txt-oflo
-                                        a Checkout
-                                tr
-                                    td 3
-                                    td.txt-oflo
-                                        b 2001
-                                    td NORMAL
-                                    td
-                                        span.text-warning Pending
-                                    td.txt-oflo 
-                                        a Checkin
-                                tr
-                                    td 4
-                                    td.txt-oflo
-                                        b 1006
-                                    td VIP
-                                    td
-                                        span.text-success Empty
-                                    td.txt-oflo 
-                                        a Checkin
-                                tr
-                                    td 5
-                                    td.txt-oflo
-                                        b 3002
-                                    td VIP
-                                    td
-                                        span.text-danger Busy
-                                    td.txt-oflo
-                                        a Checkout
-                                tr
-                                    td 6
-                                    td.txt-oflo
-                                        b 2005
-                                    td NORMAL
-                                    td
-                                        span.text-warning Pending
-                                    td.txt-oflo 
-                                        a Checkin
+                                each val, index in listRoom
+                                    tr
+                                        td=index
+                                        td.txt-oflo
+                                            b=val.room_name
+                                        td=val.type.type_name
+                                        if val.status.status_label == 'Empty'
+                                            td
+                                                span.text-success Empty
+                                            td
+                                                a(href=`/control/checkin/${val.id}`)
+                                                    div
+                                                        i.fa.fa-exchange &nbsp;&nbsp;
+                                                        span.text-danger Checkin
+                                        else if val.status.status_label == 'Busy'
+                                            td
+                                                span.text-danger Busy
+                                            td
+                                                a(href=`/control/checkout/${val.id}`)
+                                                    div
+                                                        i.fa.fa-exchange &nbsp;&nbsp;
+                                                        span.text-danger Checkout
+                                        else
+                                            td
+                                                span.text-warning 'Pending'
+                                            td
+                                                a(href=`/control/checkin/${val.id}`)
+                                                    div
+                                                        i.fa.fa-exchange &nbsp;&nbsp;
+                                                        span.text-danger Checkin
+                                

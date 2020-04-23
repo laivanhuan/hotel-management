@@ -43,60 +43,18 @@ block contents
                                 tr
                                     th #
                                     th Họ và tên
-                                    th Phòng
-                                    th Số người
+                                    th Số căn cước
+                                    th Số điện thoại
                                     th Giờ vào
                             tbody
-                                tr
-                                    td 1
-                                    td.txt-oflo Elite admin
-                                    td 1001
-                                    td
-                                        span.text-info 3
-                                    td.txt-oflo April 18, 2017
-                                tr
-                                    td 2
-                                    td.txt-oflo Elite admin
-                                    td 1001
-                                    td
-                                        span.text-info 3
-                                    td.txt-oflo April 18, 2017
-                                tr
-                                    td 3
-                                    td.txt-oflo Elite admin
-                                    td 1001
-                                    td
-                                        span.text-info 3
-                                    td.txt-oflo April 18, 2017
-                                tr
-                                    td 4
-                                    td.txt-oflo Elite admin
-                                    td 1001
-                                    td
-                                        span.text-info 3
-                                    td.txt-oflo April 18, 2017
-                                tr
-                                    td 5
-                                    td.txt-oflo Elite admin
-                                    td 1001
-                                    td
-                                        span.text-info 3
-                                    td.txt-oflo April 18, 2017
-                                tr
-                                    td 6
-                                    td.txt-oflo Elite admin
-                                    td 1001
-                                    td
-                                        span.text-info 3
-                                    td.txt-oflo April 18, 2017
-                                tr
-                                    td 7
-                                    td.txt-oflo Elite admin
-                                    td 1001
-                                    td
-                                        span.text-info 3
-                                    td.txt-oflo April 18, 2017
-
+                                each val, index in listCustomer
+                                    tr
+                                        td= index
+                                        td.txt-oflo= val.fullname
+                                        td= val.customer_id
+                                        td= val.numberphone
+                                        td.txt-oflo= new Date(val.createdAt).toLocaleString()
+                                
 block scripts
     script(src='js/waypoints/lib/jquery.waypoints.js')
     script(src='js/counterup/jquery.counterup.min.js')
