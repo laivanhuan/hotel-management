@@ -30,13 +30,13 @@
  
     "production": {
  
-        "username": "",
+        "username": "dwB9kiTNLB",
  
-        "password": null,
+        "password": "T5GPd0tShi",
  
-        "database": "",
+        "database": "dwB9kiTNLB",
  
-        "host": "127.0.0.1",
+        "host": "remotemysql.com",
  
         "dialect": "mysql"
  
